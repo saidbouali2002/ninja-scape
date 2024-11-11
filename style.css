@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", serif;
+    text-decoration: none;
+}
+
+body {
+    background-color: #114;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+header {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 30px;
+    padding-bottom: 100px;
+}
+
+header .logo {
+    margin-left: 50px;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "Rubik Wet Paint", system-ui;
+    color: white;
+}
+
+header nav li a {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.5s all ease;
+}
+
+header nav li a:hover, .active {
+    color: rgb(193, 233, 15);
+}
+
+nav {
+    margin-right: 50px;
+}
+
+/* تنسيقات القائمة البرغر */
+.burger-menu {
+    display: none; /* إخفاء الأيقونة في الشاشات الكبيرة */
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* وسائل الإعلام لإظهار القائمة البرغر على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .burger-menu {
+        display: block; /* عرض الأيقونة في الشاشات الصغيرة */
+    }
+
+    nav ul {
+        display: none; /* إخفاء القائمة في الشاشات الصغيرة */
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        top: 60px;
+        right: 30px;
+        background-color: #114;
+        padding: 20px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        
+    }
+
+    nav ul.active {
+        display: flex; /* عرض القائمة عند تفعيلها */
+    }
+}
+
+.content{
+    display: flex;
+    
+    justify-content: center;
+}
+
+
+.hero{
+    
+    width: 80%;
+    display: flex;
+    align-items: center;
+    gap: calc(80% - 70%);
+    justify-content: center;
+}
+
+
+
+.hero .info{
+    
+    
+}
+
+.hero h2{
+    color: white;
+    font-size: 50px;
+    
+}
+
+.hero p{
+    color: white;
+    max-width: 400px;
+    font-size: 13px;
+    font-weight: 200;
+    padding-top: 5px;
+    padding-bottom: 30px;
+}
+
+
+
+.input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.inp {
+    padding: 12px 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.inp:focus {
+    border-color: #70c1b3; /* تغيير اللون عند التركيز */
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #70c1b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5a9c91; /* تغيير اللون عند تمرير الفأرة */
+}
+
+
+.img{
+    width: 400px;
+    
+}
+
+img{
+    width: 100%;transition: 1s;
+}
+
+img:hover{
+    transform: scale(1.05);
+}
+
+@media (max-width: 1000px){
+    .hero{
+        
+        flex-direction: column;
+    }
+
+    .info{
+        padding-bottom: 20px;
+
+    }
+}
+
+.game{
+    background-color: whitesmoke;
+    margin-top: 170px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 50px;
+    width: 100%;
+    height: 100%;
+}
+
+.game h2{
+    padding-bottom: 50px;    padding-top: 60px;
+}
+
+.game .story{
+
+    padding-bottom: 60px;
+}
+
+.gameplay{
+    padding-top: 20px;
+}
+
+.gameplay ul{
+    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+span{
+    font-size: 20px;
+    font-weight: 700;
+    
+}
+
+.aboutimg{
+    width: 600px;
+}
+
+@media (max-width: 650px){
+    
+.aboutimg{
+    width: 300px;
+}
+
+    
+}
+
+
+@media (max-width: 450px){
+    
+    .hero{
+        margin-left: 10px;
+        width: 80%;
+    }
+
+    .inp {
+        padding: 12px 20px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        
+        outline: none;
+        transition: border-color 0.3s ease;
+    }
+
+    .input{
+        flex-direction: column;
+    }
+      
+    .img{
+        width: 300px;
+        
+    }
+    }
